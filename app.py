@@ -5,10 +5,10 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 
-cors = CORS(app, resources={"/*": {"origins": "*"}})
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 # load the learner
-learn = load_learner(path='./models', file='trained_model.pkl')
+learn = load_learner(path='./models', file='trained_model_prueba_1.pkl')
 classes = learn.data.classes
 
 
